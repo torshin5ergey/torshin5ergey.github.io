@@ -16,7 +16,6 @@ This repository contains various creative code experiments.
 
 - [cellular-automata](./cellular-automata/): a collection of creative code projects based on cellular automata.
 
-## License
 
 ## License
 
