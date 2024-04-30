@@ -14,7 +14,7 @@ This repository contains various creative code experiments.
 
 ## Projects
 
-- [cellular-automata](./cellular-automata/): 
+- [cellular-automata](./cellular-automata/): a collection of creative code projects based on cellular automata.
 
 ## Author 
 
