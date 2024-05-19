@@ -1,4 +1,4 @@
-/* Langton's ant
+/* Langton's ant (singlecolor)
 Written by Sergey Torshin @torshin5ergey
 */
 
@@ -22,11 +22,11 @@ const RULES = {
   },
 };
 
-const CANVAS_W = 610; // Canvas width (px)
-const CANVAS_H = 610; // Canvas height (px)
+const CANVAS_W = 640; // Canvas width (px)
+const CANVAS_H = 640; // Canvas height (px)
 
-const WIDTH = 100; // CA field width
-const HEIGHT = 100; // CA field height
+const WIDTH = 50; // CA field width
+const HEIGHT = 50; // CA field height
 // Single cell size (px)
 const CELL_W = CANVAS_W / WIDTH; // Cell width
 const CELL_H = CANVAS_H / HEIGHT; // Cell height
@@ -40,7 +40,7 @@ const BG = "#2F2F2F"; // Background color
 
 function setup() {
   //createCanvas(CANVAS_W, CANVAS_H);
-  let canvas = createCanvas(windowWidth * 0.9, windowHeight * 0.9);
+  let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("canvas");
   frameRate(60);
   cells = generateZerosField();
@@ -154,4 +154,11 @@ function moveAnts(ants, array) {
     ants: ants,
     cells: array,
   };
+}
+
+function mouseClicked() {
+  if (mouseButton === LEFT) {
+    cells = generateZerosField();
+    ants = generateRandomAnts([]);
+  }
 }

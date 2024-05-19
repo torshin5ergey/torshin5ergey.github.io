@@ -25,8 +25,8 @@ const gliderArray = [
 ];
 */
 
-const CANVAS_W = 600; // Canvas width (px)
-const CANVAS_H = 600; // Canvas height (px)
+const CANVAS_W = 640; // Canvas width (px)
+const CANVAS_H = 640; // Canvas height (px)
 
 const WIDTH = 100; // CA field width
 const HEIGHT = 100; // CA field height
@@ -36,12 +36,12 @@ const CELL_H = CANVAS_H / HEIGHT; // Cell height
 
 let cells = []; // Cells values array
 
-const FG = "#E15A97"; // Foreground color
+const FG = "#E8E9F3"; // Foreground color
 const BG = "#2F2F2F"; // Background color
 
 function setup() {
   //createCanvas(CANVAS_W, CANVAS_H);
-  let canvas = createCanvas(windowWidth * .9, windowHeight * .9);
+  let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("canvas");
   frameRate(30);
   noStroke();
@@ -175,6 +175,12 @@ function getCellNewValue(array, x, y, count) {
     return 1;
   } else {
     return 0;
+  }
+}
+
+function mouseClicked() {
+  if (mouseButton === LEFT) {
+    cells = generateRandomCells();
   }
 }
 

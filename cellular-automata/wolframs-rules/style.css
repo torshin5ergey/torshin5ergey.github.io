@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Catamaran", "system-ui";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2f2f2f;
+}
+
+.canvas-container {
+  position: relative;
+  max-width: 600px;
+  height: 90vw;
+  max-height: 600px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 20px black;
+  aspect-ratio: 1/1;
+}
+
+p {
+  font-size: .9em;
+  padding: 0;
+  margin: 0;
+  color: whitesmoke;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.caption-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2f2f2f;
+  padding: 10px 16px;
+}
+
+.caption-bot-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #2f2f2f;
+  padding: 10px 16px;
+}
