@@ -1,0 +1,62 @@
+<!-- header.html -->
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    color: rgb(232, 233, 243);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: #2f2f2f;
+    font-size: 16px;
+    font-family: "Reddit Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(232, 233, 243);
+}
+
+.header-title {
+    margin-left: 26px;
+    font-weight: 900;
+}
+
+.random-button {
+    margin-right: 26px;
+    background-color: transparent;
+    color: rgb(232, 233, 243);
+    border: 1px solid rgb(232, 233, 243);
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.random-button:hover {
+    background-color: rgb(232, 233, 243);
+    color: #333;
+    border-color: transparent;
+}
+
+
+</style>
+
+<header>
+    <div class="header-title">
+        <a href="/index.html">Coding.exe</a>
+    </div>
+    <button class="random-button" onclick="openRandomArt()">Random Art</button>
+</header>
+
+<script src="header-script.js"></script>

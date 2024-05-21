@@ -2,19 +2,24 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Catamaran", "system-ui";
+  font-family: "Reddit Mono", monospace;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #2f2f2f;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .canvas-container {
   position: relative;
   max-width: 600px;
-  height: 90vw;
+  height: 100vw;
   max-height: 600px;
   overflow: hidden;
   box-shadow: 0 0 20px black;
@@ -22,7 +27,6 @@ body {
 }
 
 p {
-  font-size: .9em;
   padding: 0;
   margin: 0;
   color: #E8E9F3;
