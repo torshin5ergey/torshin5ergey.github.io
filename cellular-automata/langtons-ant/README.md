@@ -2,7 +2,7 @@
 
 Chris Langton's cellular automaton "Langton's ant" in JavaScript using p5.js.
 
-![demo](assets/demo.gif)
+![demo](assets/multicolor-demo.gif)
 
 ## Description
 This project implements [Langton's ant](https://en.wikipedia.org/wiki/Langton's_ant), a cellular automaton devised by Chris Langton in 1986. Langton's ant is a two-dimensional Turing machine with very simple rules but exhibits complex emergent behavior.

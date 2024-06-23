@@ -25,8 +25,8 @@ const gliderArray = [
 ];
 */
 
-const CANVAS_W = 640; // Canvas width (px)
-const CANVAS_H = 640; // Canvas height (px)
+const CANVAS_W = 600; // Canvas width (px)
+const CANVAS_H = 600; // Canvas height (px)
 
 const WIDTH = 100; // CA field width
 const HEIGHT = 100; // CA field height

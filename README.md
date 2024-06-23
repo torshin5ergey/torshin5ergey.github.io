@@ -1,6 +1,7 @@
-# Creative Code Playground 🎨
+# Coding.exe 🎨
 
-This repository contains various creative code experiments.
+This is my digital generative computer graphics exhibition.
+I'm exploring various techniques and tools for creating generative art. One of my favorite tools is [p5.js](https://editor.p5js.org/torshin5ergey/sketches), a JavaScript library that makes it incredibly easy to create and share visual art.
 
 ## Repository Structure
 
@@ -14,8 +15,7 @@ This repository contains various creative code experiments.
 
 ## Projects
 
-- [cellular-automata](./cellular-automata/): a collection of creative code projects based on cellular automata.
-
+- [cellular-automata](./cellular-automata/): a collection of creative code projects based on cellular automata rules.
 
 ## License
 

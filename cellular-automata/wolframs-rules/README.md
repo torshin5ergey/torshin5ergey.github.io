@@ -1,18 +1,43 @@
 # Wolfram's Rules with p5.js
 
-Cellular automaton Wolfram's in JavaScript using p5.js.
+Stephen's Wolfram elementary cellular automations in JavaScript using p5.js.
 
 ![demo](assets/demo-rule184.gif)
 ![demo](assets/demo-rule30.gif)
 ![demo](assets/demo-rule120.gif)
 
 ## Description
-This project implements cellular automatons:
+
+This project visualizes [Wolfram's Rules](https://en.wikipedia.org/wiki/Rule_30), a one-dimensional binary cellular automatons identified by Stephen Wolfram. The rules is applied to a string of cells, each of which can be either 0 (white) or 1 (black). The state of each cell in the next generation depends on its current state and the state of its two immediate neighbors. There are following rules:
 - [Rule 184](https://en.wikipedia.org/wiki/Rule_184)
 - [Rules 30, 120, 135, 225](https://en.wikipedia.org/wiki/Rule_30)
 
 ## Rules
 
+**Rule 30**
+| Current Pattern | 111 | 110 | 101 | 100 | 011 | 010 | 001 | 000 |
+|:---------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| New state       | 0   | 0   | 0   | 1   | 1   | 1   | 1   | 0   |
+
+**Rule 120**
+| Current Pattern | 111 | 110 | 101 | 100 | 011 | 010 | 001 | 000 |
+|:---------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| New state       | 0   | 1   | 1   | 1   | 1   | 0   | 0   | 0   |
+
+**Rule 135**
+| Current Pattern | 111 | 110 | 101 | 100 | 011 | 010 | 001 | 000 |
+|:---------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| New state       | 1   | 0   | 0   | 0   | 0   | 1   | 1   | 1   |
+
+**Rule 184**
+| Current Pattern | 111 | 110 | 101 | 100 | 011 | 010 | 001 | 000 |
+|:---------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| New state       | 1   | 0   | 1   | 1   | 1   | 0   | 0   | 0   |
+
+**Rule 225**
+| Current Pattern | 111 | 110 | 101 | 100 | 011 | 010 | 001 | 000 |
+|:---------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| New state       | 1   | 1   | 1   | 0   | 0   | 0   | 0   | 1   |
 
 ## How to Run
 
