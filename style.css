@@ -45,6 +45,11 @@ body {
     margin-top: 42px;
     vertical-align: middle;
     width: 100%;
+    transition: filter 0.5s ease;
+}
+
+.column img:hover {
+    filter: brightness(125%)
 }
 
 .box {

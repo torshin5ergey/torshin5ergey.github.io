@@ -14,6 +14,7 @@ function openRandomArt() {
         '/cellular-automata/conways-simulator/index.html',
         '/cellular-automata/langtons-ant/index.html',
         '/cellular-automata/wolframs-rules/index.html',
+        '/cellular-automata/maze-rule/index.html',
     ];
     let randomPage = pages[Math.floor(Math.random() * pages.length)];
     window.location.href = randomPage;
