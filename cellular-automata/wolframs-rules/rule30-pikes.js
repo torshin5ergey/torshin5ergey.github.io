@@ -3,62 +3,46 @@ Wolfram's Rules (30, 120, 135, 225). Triangle generator
 Written by Sergey Torshin @torshin5ergey
 */
 
-/*
-const CANVAS_W = 600; // Canvas width (px) 603
-const CANVAS_H = 600; // Canvas height (px) 1072
-const WIDTH = 100; // CA field width (153 27)
-const HEIGHT = 100; // CA field height (272 48)
-// Single cell size (px)
-const CELL_W = CANVAS_W / WIDTH; // Cell width
-const CELL_H = CANVAS_H / HEIGHT; // Cell height
-
-let cells = []; // Cells values array.
-let FG; // Foreground colors
-let BG; // Background color
-const rule = "rule30"; // rule30, rule120, rule135, rule225
-*/
-
 function setup() {
-    CANVAS_W = 600; // Canvas width (px) 603
-    CANVAS_H = 600; // Canvas height (px) 1072
-    WIDTH = 100; // CA field width (153 27)
-    HEIGHT = 100; // CA field height (272 48)
-    // Single cell size (px)
-    CELL_W = CANVAS_W / WIDTH; // Cell width
-    CELL_H = CANVAS_H / HEIGHT; // Cell height
-    cells = []; // Cells values array.
-    rule = "rule30"; // rule30, rule120, rule135, rule225
-    ////////////////////////////////////////////////////////////////////////////
-    canvas = createCanvas(windowWidth, windowHeight);
-    canvas.parent("sketch-container")
-    colorMode(RGB, 255, 255, 255, 1);
-    BG = color("rgb(47, 47, 47)"); // Background color
-    FG = color("rgb(232, 233, 243"); // Foreground color
-    background(BG);
-    frameRate(60);
-    noStroke();
-    cells = generateZerosField();
-    cells = genarateOriginCell(cells);
-    //drawCellsField(cells);
+  CANVAS_W = 600; // Canvas width (px) 603
+  CANVAS_H = 600; // Canvas height (px) 1072
+  WIDTH = 100; // CA field width (153 27)
+  HEIGHT = 100; // CA field height (272 48)
+  // Single cell size (px)
+  CELL_W = CANVAS_W / WIDTH; // Cell width
+  CELL_H = CANVAS_H / HEIGHT; // Cell height
+  cells = []; // Cells values array.
+  rule = "rule30"; // rule30, rule120, rule135, rule225
+
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent("sketch-container")
+  colorMode(RGB, 255, 255, 255, 1);
+  BG = color("rgb(47, 47, 47)"); // Background color
+  FG = color("rgb(232, 233, 243"); // Foreground color
+  background(BG);
+  frameRate(60);
+  noStroke();
+  cells = generateZerosField();
+  cells = genarateOriginCell(cells);
 }
 
 function draw() {
-    if (frameCount % HEIGHT === 0) {
-      cells = generateZerosField();
-      cells = genarateOriginCell(cells);
-    }
-    drawCellsField(cells);
-    cells = updateCells(cells, rule);
+  if (frameCount % HEIGHT === 0) {
+    cells = generateZerosField();
+    cells = genarateOriginCell(cells);
   }
+  drawCellsField(cells);
+  cells = updateCells(cells, rule);
+}
 
 /**
  * Generates a 2D array representing a field filled with zeros.
  * @returns {Array<Array<number>>} 2D array filled with zeros.
  */
 function generateZerosField() {
-    let array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
-    return array;
-  }
+  let array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
+  return array;
+}
 
 /**
  * Generates a random line on the bot of the given array with the specified density.
@@ -85,10 +69,10 @@ function generateRandomLine(array, density) {
  * @returns {Array<Array<number>>} The modified 2D array with a cell
  */
 function genarateOriginCell(array) {
-    for (let i = 0; i < floor(random(1, 5)); i++){
-        array[floor(random(0, WIDTH))][0] = 1;
-    }
-    return array;
+  for (let i = 0; i < floor(random(1, 5)); i++) {
+    array[floor(random(0, WIDTH))][0] = 1;
+  }
+  return array;
 }
 
 /**
@@ -97,12 +81,12 @@ function genarateOriginCell(array) {
  * @returns {void}
  */
 function drawCellsField(array) {
-    for (let x = 0; x < WIDTH; x++) {
-      for (let y = 0; y < HEIGHT; y++) {
-        drawCell(x, y, array[x][y]);
-      }
+  for (let x = 0; x < WIDTH; x++) {
+    for (let y = 0; y < HEIGHT; y++) {
+      drawCell(x, y, array[x][y]);
     }
   }
+}
 
 /**
  * Draw cell by position and state.
@@ -128,21 +112,21 @@ function drawCell(x, y, state) {
  * @returns {Array<Array<number>>} The modified array with updated cell states according to Rule 184.
  */
 function updateCells(array, rule) {
-    let newCells = JSON.parse(JSON.stringify(array));
-    for (let x = 0; x < WIDTH; x++) {
-      for (let y = 0; y < HEIGHT ; y++) {
-        let cur = array[x][y];
-        let top = array[x][(y - 1 + HEIGHT) % HEIGHT];
-        let bottom = array[x][(y + 1 + HEIGHT) % HEIGHT];
-        let left = array[(x - 1 + WIDTH) % WIDTH][y];
-        let right = array[(x + 1 + WIDTH) % WIDTH][y];
-        let curPat = [left, cur, right]; // Current pattern
-        // Define new cell state
-        let newState = applyRule(rule, curPat);
-        newCells[x][y+1] = newState;
-      }
+  let newCells = JSON.parse(JSON.stringify(array));
+  for (let x = 0; x < WIDTH; x++) {
+    for (let y = 0; y < HEIGHT ; y++) {
+      let cur = array[x][y];
+      let top = array[x][(y - 1 + HEIGHT) % HEIGHT];
+      let bottom = array[x][(y + 1 + HEIGHT) % HEIGHT];
+      let left = array[(x - 1 + WIDTH) % WIDTH][y];
+      let right = array[(x + 1 + WIDTH) % WIDTH][y];
+      let curPat = [left, cur, right]; // Current pattern
+      // Define new cell state
+      let newState = applyRule(rule, curPat);
+      newCells[x][y+1] = newState;
     }
-    return newCells;
+  }
+  return newCells;
 }
 
 

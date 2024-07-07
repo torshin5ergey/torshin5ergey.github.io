@@ -74,23 +74,3 @@ body {
         padding: 0 4px;
     }
 }
-
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-/*@media screen and (max-width: 600px) {
-    .root-container {
-        width: 100%;
-    }
-
-    .column {
-        -ms-flex: 75%; /* IE10 
-        flex: 75%;
-        max-width: 75%;
-        margin: auto;
-    }
-
-    .column img {
-        margin-top: 80px;
-    }
-}
-*/

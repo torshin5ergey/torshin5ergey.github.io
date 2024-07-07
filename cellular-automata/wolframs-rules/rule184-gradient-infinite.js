@@ -2,26 +2,6 @@
 Written by Sergey Torshin @torshin5ergey
 */
 
-/*
-const CANVAS_W = 600; // Canvas width (px)
-const CANVAS_H = 600; // Canvas height (px)
-
-const WIDTH = 100; // CA field width
-const HEIGHT = 100; // CA field height
-
-// Single cell size (px)
-const CELL_W = CANVAS_W / WIDTH; // Cell width
-const CELL_H = CANVAS_H / HEIGHT; // Cell height
-
-let cells = []; // Cells values array
-let currentRowToClear = 0;
-let isForward = true;
-
-let fgColors; // Foreground colors
-let BG; // Background color
-let interValue; // Lerp color ratio
-*/
-
 function setup() {
   CANVAS_W = 600; // Canvas width (px)
   CANVAS_H = 600; // Canvas height (px)
@@ -33,17 +13,19 @@ function setup() {
   cells = []; // Cells values array
   currentRowToClear = 0;
   isForward = true;
-  //////////////////////////////////////////////////////////////////////////////
+
   colorMode(RGB, 255, 255, 255, 1);
   fgColor = [color("rgb(124, 234, 156)"), color("rgb(247, 172, 207)"), color("rgb(85, 214, 190)"), color("rgb(104, 116, 232)")]
   fgColor1 = random(fgColor);
   fgColor2 = random(fgColor);
   BG = color("rgb(47, 47, 47)"); // Background color
-  canvas = createCanvas(CANVAS_W, CANVAS_H);
+
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("sketch-container");
   background(BG);
   frameRate(60);
   noStroke();
+  
   cells = generateZerosField();
   cells = generateRandomLine(cells, floor(random(100)));
   drawCellsField(cells);

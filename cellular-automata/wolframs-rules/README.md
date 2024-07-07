@@ -39,24 +39,12 @@ This project visualizes [Wolfram's Rules](https://en.wikipedia.org/wiki/Rule_30)
 |:---------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | New state       | 1   | 1   | 1   | 0   | 0   | 0   | 0   | 1   |
 
-## How to Run
-
-1. Clone this repository to your local machine.
-```bash
-git clone https://github.com/torshin5ergey/creative-code-playground.git
-```
-2. Go to `wolframs-rules` directory.
-```bash
-cd creative-code-playground/cellular-automata/wolframs-rules
-```
-3. Open the `index.html` file in your web browser. The default is `rules30-120-135-225-infinite-loop.js` sketch with "Rule 30" animation.
-    - To see other animations you need to change sketch
-
 ## View Online
 
 You can also view this project online in p5js Web Editor:
 - [Rule 184](https://editor.p5js.org/torshin5ergey/full/CHG4PIw2g)
 - [Rule 30, 120, 135, 225](https://editor.p5js.org/torshin5ergey/full/CHG4PIw2g)
+This projects also available on its project page [here](https://torshin5ergey.github.io/cellular-automata/wolframs-rules/index.html).
 
 ## How to Use in Your Project
 
@@ -66,7 +54,7 @@ You can also view this project online in p5js Web Editor:
 4. Customize.
     - If needed, you may need to adjust the following lines in the `sketch_name.js` file to fit your desired canvas size or    container element:
         ```javascript
-        let canvas = createCanvas(windowWidth * 0.9, windowHeight * 0.9);
+        let canvas = createCanvas(windowWidth, windowHeight);
         canvas.parent("canvas");
         ```
     - You can modify the dimensions passed to `createCanvas()` to adjust the size of the canvas. Additionally, you may need to change the parent element ID passed to `canvas.parent()`. Alternatively, you can use the following line and comment out the two lines above to use a fixed canvas size:

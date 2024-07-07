@@ -12,23 +12,18 @@ This project implements [Langton's ant](https://en.wikipedia.org/wiki/Langton's_
 1. At a **zero** square, turn 90° right, flip the color of the square, move forward one unit.
 2. At a **nonzero** square, turn 90° left, flip the color of the square, move forward one unit.
 
-## How to Run
-
-1. Clone this repository to your local machine.
-2. Open the `index.html` file in your web browser.
-
 ## View Online
 
-You can also view this project online [here](https://editor.p5js.org/torshin5ergey/full/E5ZIZMqEi)
+You can also view this project online in p5.js Web Editor [here](https://editor.p5js.org/torshin5ergey/full/E5ZIZMqEi) or on this project page [here](https://torshin5ergey.github.io/cellular-automata/langtons-ant/index.html).
 
 ## How to Use in Your Project
 
 1. Clone the repository to your computer.
 2. Include `p5.js` in your project.
-3. Import `sketch-singlecolor.js` into your project and use it in your code.
-4. If needed, you may need to adjust the following lines in the `sketch-singlecolor.js` file to fit your desired canvas size or container element:
+3. Import `sketch-singlecolor.js` or `sketch-multicolor.js` into your project and use it in your code.
+4. If needed, you may need to adjust the following lines in the `sketch-singlecolor.js` or `sketch-multicolor.js` file to fit your desired canvas size or container element:
 ```javascript
-let canvas = createCanvas(windowWidth * 0.9, windowHeight * 0.9);
+let canvas = createCanvas(windowWidth, windowHeight);
 canvas.parent("canvas");
 ```
 You can modify the dimensions passed to createCanvas() to adjust the size of the canvas. Additionally, you may need to change the parent element ID passed to canvas.parent().
@@ -37,6 +32,7 @@ Alternatively, you can use the following line and comment out the two lines abov
 createCanvas(CANVAS_W, CANVAS_H);
 ```
 Change CANVAS_W and CANVAS_H with the desired width and height of the canvas.
+You also can modify number of ants in the `sketch-multicolor.js` file with `ANTS_COUNT` variable.
 
 ## License
 

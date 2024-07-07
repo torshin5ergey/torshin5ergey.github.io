@@ -1,45 +1,6 @@
 /* Langton's ant (multicolored)
 Written by Sergey Torshin @torshin5ergey
 */
-/*
-// Rules for ant based on direction and cell value.
-let RULES = {
-  up: {
-    0: { direction: "right", xChange: 1, yChange: 0 },
-    1: { direction: "left", xChange: -1, yChange: 0 },
-  },
-  down: {
-    0: { direction: "left", xChange: -1, yChange: 0 },
-    1: { direction: "right", xChange: 1, yChange: 0 },
-  },
-  left: {
-    0: { direction: "up", xChange: 0, yChange: -1 },
-    1: { direction: "down", xChange: 0, yChange: 1 },
-  },
-  right: {
-    0: { direction: "down", xChange: 0, yChange: 1 },
-    1: { direction: "up", xChange: 0, yChange: -1 },
-  },
-};
-
-let CANVAS_W = 600; // Canvas width (px)
-let CANVAS_H = 600; // Canvas height (px)
-
-let WIDTH = 70; // CA field width
-let HEIGHT = 70; // CA field height
-// Single cell size (px)
-let CELL_W = CANVAS_W / WIDTH; // Cell width
-let CELL_H = CANVAS_H / HEIGHT; // Cell height
-
-let cells = []; // Cells values array
-let ANTS_COUNT = 5; // Langton's ants count
-let ants = []; // List of dictionaries. Ants positions (x:pos, y:pos)
-
-//const FG = "#6BD425"; // Foreground color
-let BG = "#2F2F2F"; // Background color
-*/
-
-//let RULES, CANVAS_W, CANVAS_H, WIDTH, HEIGHT, CELL_W, CELL_H, cells, ANTS_COUNT, ants, BG, canvas
 
 function setup() {
   // Rules for ant based on direction and cell value.
@@ -75,9 +36,7 @@ function setup() {
   ANTS_COUNT = 5; // Langton's ants count
   ants = []; // List of dictionaries. Ants positions (x:pos, y:pos)
 
-  //const FG = "#6BD425"; // Foreground color
   BG = "#2F2F2F"; // Background color
-  //////////////////////////////////////////////////////////////////////////////
   //createCanvas(CANVAS_W, CANVAS_H);
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("sketch-container");

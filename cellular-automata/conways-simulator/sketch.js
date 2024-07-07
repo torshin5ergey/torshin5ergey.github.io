@@ -1,4 +1,5 @@
 // Conway's Game of Life
+// Written by Sergey Torshin @torshin5ergey
 
 /* Glider test array
 const gliderArray = [

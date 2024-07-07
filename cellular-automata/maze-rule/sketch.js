@@ -32,7 +32,7 @@ function setup() {
 function draw() {
   drawCellsField(cells);
   if (frameCount > 3){
-  cells = updateCellsField(cells);
+    cells = updateCellsField(cells);
   }
 }
 

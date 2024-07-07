@@ -15,7 +15,7 @@ Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life) is 
 
 ## View Online
 
-You can also view this project online [here](https://editor.p5js.org/torshin5ergey/full/GNVlnPY3O)
+You can also view this project online in p5.js Web Editor [here](https://editor.p5js.org/torshin5ergey/full/GNVlnPY3O) or on this project page [here](https://torshin5ergey.github.io/cellular-automata/conways-simulator/index.html).
 
 ## License
 

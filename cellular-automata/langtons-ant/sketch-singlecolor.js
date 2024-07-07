@@ -1,43 +1,6 @@
 /* Langton's ant (singlecolor)
 Written by Sergey Torshin @torshin5ergey
 */
-/*
-// Rules for ant based on direction and cell value.
-let RULES = {
-  up: {
-    0: { direction: "right", xChange: 1, yChange: 0 },
-    1: { direction: "left", xChange: -1, yChange: 0 },
-  },
-  down: {
-    0: { direction: "left", xChange: -1, yChange: 0 },
-    1: { direction: "right", xChange: 1, yChange: 0 },
-  },
-  left: {
-    0: { direction: "up", xChange: 0, yChange: -1 },
-    1: { direction: "down", xChange: 0, yChange: 1 },
-  },
-  right: {
-    0: { direction: "down", xChange: 0, yChange: 1 },
-    1: { direction: "up", xChange: 0, yChange: -1 },
-  },
-};
-
-let CANVAS_W = 600; // Canvas width (px)
-let CANVAS_H = 600; // Canvas height (px)
-
-let WIDTH = 50; // CA field width
-let HEIGHT = 50; // CA field height
-// Single cell size (px)
-let CELL_W = CANVAS_W / WIDTH; // Cell width
-let CELL_H = CANVAS_H / HEIGHT; // Cell height
-
-let cells = []; // Sells values array
-let ANTS_COUNT = 1;
-let ants = []; // List of dictionaries. Ants positions (x:pos, y:pos)
-
-let FG = "#E8E9F3"; // Foreground color
-let BG = "#2F2F2F"; // Background color
-*/
 
 function setup() {
   RULES = {
@@ -75,8 +38,6 @@ function setup() {
   FG = "#E8E9F3"; // Foreground color
   BG = "#2F2F2F"; // Background color
 
-
-  //////////////////////////////////////////////////////////////////////////////
   //createCanvas(CANVAS_W, CANVAS_H);
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("sketch-container");
