@@ -6,7 +6,7 @@ This directory contains a collection of creative code projects based on [cellula
 
 - [conways-simulator](./conways-simulator/): John Conway's famous cellular automaton "Game of Life" in JavaScript using p5.js.
 - [langtons-ant](./langtons-ant/): Chris Langton's cellular automaton "Langton's ant" in JavaScript using p5.js.
-- [maze-rules](./maze-rules/): Maze rule cellular automaton in JavaScript using p5.js.
+- [maze-rule](./maze-rule/): Maze rule cellular automaton in JavaScript using p5.js.
 - [wolframs-rules](./wolframs-rules/): Stephen's Wolfram elementary cellular automations in JavaScript using p5.js.
 
 ## Author
