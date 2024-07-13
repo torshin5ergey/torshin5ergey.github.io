@@ -80,6 +80,34 @@ p {
   text-decoration: underline;
 }
 
+table, th, td {
+  margin: 12px auto 0;
+  width: 100%;
+  border: 1px solid #606064;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  position: relative;
+  width: fit-content;
+}
+
+th {
+  padding: 4px;
+  text-align: center;
+  font-weight: normal;
+  background-color: #464646;
+}
+
+table .first-column {
+  text-align: right;
+}
+
+tr {
+  padding: 6px;
+}
+
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .canvas-container {

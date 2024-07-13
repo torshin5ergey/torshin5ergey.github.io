@@ -2,7 +2,7 @@
 
 John Conway's famous cellular automaton "Game of Life" in JavaScript using p5.js.
 
-![demo](assets/preview-demo.gif)
+![thumbnail](assets/preview-demo.gif)
 
 ## Description
 
@@ -13,9 +13,23 @@ Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life) is 
 1. **Survival:** A live cell survives if it has 2 or 3 neighbors (other live cells). Otherwise, it dies due to "loneliness" or "overcrowding".
 2. **Birth:** An empty (dead) cell with exactly 3 live neighbors becomes alive.
 
+## Variations
+
+- **Conways vanilla** implements classic Game of Life rules.
+![game of life classic](assets/demo-conways-vanilla.gif)
+
+- **Conways generations** extends classic Game of Life rules with the *generations* or *ages* rule:
+
+    **Generations:** Each cell can have a value between 0 and a specified maximum (10 for this example). The brightness of a cell's color represents its *age* or *generation* level. Cells age based on the rules defined by their neighbors in the grid, with brighter cells indicating a higher generation value.
+![game of life classic](assets/demo-conways-generations.gif)
+
 ## View Online
 
-You can also view this project online in p5.js Web Editor [here](https://editor.p5js.org/torshin5ergey/full/GNVlnPY3O) or on this project page [here](https://torshin5ergey.github.io/cellular-automata/conways-simulator/index.html).
+You can also view this project online in p5.js Web Editor:
+- [Conways vanilla](https://editor.p5js.org/torshin5ergey/full/GNVlnPY3O)
+- [Conways generations]()
+
+This projects also available on its own project page [here](https://torshin5ergey.github.io/cellular-automata/conways-simulator/index.html).
 
 ## License
 
