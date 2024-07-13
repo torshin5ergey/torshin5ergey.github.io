@@ -44,7 +44,8 @@ This project visualizes [Wolfram's Rules](https://en.wikipedia.org/wiki/Rule_30)
 You can also view this project online in p5js Web Editor:
 - [Rule 184](https://editor.p5js.org/torshin5ergey/full/CHG4PIw2g)
 - [Rule 30, 120, 135, 225](https://editor.p5js.org/torshin5ergey/full/CHG4PIw2g)
-This projects also available on its project page [here](https://torshin5ergey.github.io/cellular-automata/wolframs-rules/index.html).
+
+This projects also available on its **Coding.exe** project page [here](https://torshin5ergey.github.io/cellular-automata/wolframs-rules/index.html).
 
 ## How to Use in Your Project
 
