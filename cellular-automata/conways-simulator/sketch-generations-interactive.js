@@ -1,49 +1,53 @@
-/* Conway's Game of Life simulator with generations
+/* Conway's Game of Life simulator with generations (interactive vesrion)
 Written by Sergey Torshin @torshin5ergey
 */
-
 
 function setup() {
   CANVAS_W = 600; // Canvas width (px)
   CANVAS_H = 600; // Canvas height (px)
-  WIDTH = 50; // CA field width
-  HEIGHT = 50; // CA field height
-// Single cell size (px)
+  WIDTH = 80; // CA field width
+  HEIGHT = 80; // CA field height
+  // Single cell size (px)
   CELL_W = CANVAS_W / WIDTH; // Cell width
   CELL_H = CANVAS_H / HEIGHT; // Cell height
 
   cells = []; // Cells values array
-  generations = 10; // Maximum number of generations
+  generations = 20; // Maximum number of generations
+
+  bornSize = 2; // bornSize*2+1 is the size of the born area
 
   colorMode(HSB, 360, 100, 100); // HSB color mode with alpha support
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("sketch-container");
-
-  background(BG);
   frameRate(30);
   noStroke();
-  cells = generateRandomCells();
+  cells = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
 }
 
 function draw() {
   drawCellsField(cells);
   cells = updateCellsField(cells);
+  if (mouseIsPressed) {
+    cells = bornLife(cells);
+  }
 }
 
 /**
- * Generate cell state
- * @param {number} array - Empty array
- * @returns {Array<Array<number>>} array - 2D cells values array
+ * Create alive cells around the mouse
+ * @param {Array<Array<number>>} - Array of cells
+ * @returns {Array<Array<number>>} array - Updated cells
  */
-function generateRandomCells() {
-  let array = [];
-  for (let i = 0; i < WIDTH; i++) {
-    array[i] = [];
-    for (let j = 0; j < HEIGHT; j++) {
-      array[i][j] = int(random(2)) * generations; // Initially, cells are either 0 or generations
+function bornLife(array) {
+  let x = constrain(floor(mouseX/CELL_W), bornSize, WIDTH-bornSize-1);
+  let y = constrain(floor(mouseY/CELL_H), bornSize, HEIGHT-bornSize-1);
+  for (let i = -bornSize; i <= bornSize; i++) {
+    for (let j = -bornSize; j <=bornSize; j++) {
+      if ((i + j) % 2 === 0) {
+        array[x+i][y+j] = generations;
+      }
     }
   }
-  return array;
+  return cells;
 }
 
 /**
@@ -152,7 +156,5 @@ function getCellNewValue(array, x, y, count) {
 }
 
 function mouseClicked() {
-  if (mouseButton === LEFT) {
-    cells = generateRandomCells();
+    return
   }
-}

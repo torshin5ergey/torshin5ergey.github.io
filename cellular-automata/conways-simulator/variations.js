@@ -21,6 +21,7 @@ const captionTopLeft = document.querySelector(".caption-top-left");
 let currentScript;
 let canvas, CANVAS_W, CANVAS_H, WIDTH, HEIGHT, CELL_W, CELL_H, cells, FG, BG;
 let generations;
+let bornSize
 
 const removeAllActiveClasses = () => {
     tabs.forEach((tab) => {
@@ -42,6 +43,9 @@ tabs.forEach(tab => {
         } else if (sketchId === "sketch-generations") {
             captionTopLeft.textContent = "conways generations";
             loadScript("sketch-generations.js");
+        } else if (sketchId === "sketch-generations-interactive") {
+            captionTopLeft.textContent = "interactive* conways generations";
+            loadScript("sketch-generations-interactive.js");
         }
 
         // Update description
