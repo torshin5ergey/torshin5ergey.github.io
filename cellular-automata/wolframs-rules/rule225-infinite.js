@@ -42,7 +42,7 @@ function draw() {
  * @returns {Array<Array<number>>} 2D array filled with zeros.
  */
 function generateZerosField() {
-    let array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
+    const array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
     return array;
   }
 
@@ -103,15 +103,15 @@ function drawCell(x, y, state) {
  * @returns {Array<Array<number>>} The modified array with updated cell states according to Rule 184.
  */
 function updateCells(array, rule) {
-    let newCells = JSON.parse(JSON.stringify(array));
+    const newCells = JSON.parse(JSON.stringify(array));
     for (let x = 0; x < WIDTH; x++) {
       for (let y = 0; y < HEIGHT ; y++) {
-        let cur = array[x][y];
-        let left = array[(x - 1 + WIDTH) % WIDTH][y];
-        let right = array[(x + 1 + WIDTH) % WIDTH][y];
-        let curPat = [left, cur, right]; // Current pattern
+        const cur = array[x][y];
+        const left = array[(x - 1 + WIDTH) % WIDTH][y];
+        const right = array[(x + 1 + WIDTH) % WIDTH][y];
+        const curPat = [left, cur, right]; // Current pattern
         // Define new cell state
-        let newState = applyRule(rule, curPat);
+        const newState = applyRule(rule, curPat);
         newCells[x][y + 1] = newState;
       }
     }
