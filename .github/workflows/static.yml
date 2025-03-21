@@ -22,10 +22,11 @@ concurrency:
   cancel-in-progress: false # Do not cancel the in-progress deployment
 
 jobs:
+  # Lint HTML, CSS, JS code
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Lint HTML, CSS, JS code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -39,6 +40,12 @@ jobs:
 
       - name: Run HTML lint
         run: npx htmlhint "**/*.html"
+
+      - name: Run CSS lint
+        run: npx stylelint "**/*.css"
+
+      - name: Run JS lint
+        run: npx eslint "**/*.js"
 
   # Single deploy job since we're just deploying
   deploy:
