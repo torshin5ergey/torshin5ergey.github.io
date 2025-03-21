@@ -22,8 +22,27 @@ concurrency:
   cancel-in-progress: false # Do not cancel the in-progress deployment
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint HTML, CSS, JS code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run HTML lint
+        run: npx htmlhint "**/*.html"
+
   # Single deploy job since we're just deploying
   deploy:
+    needs: lint
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
