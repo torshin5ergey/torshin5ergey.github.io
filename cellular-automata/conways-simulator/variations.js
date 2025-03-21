@@ -21,7 +21,7 @@ const captionTopLeft = document.querySelector(".caption-top-left");
 let currentScript;
 let canvas, CANVAS_W, CANVAS_H, WIDTH, HEIGHT, CELL_W, CELL_H, cells, FG, BG;
 let generations;
-let bornSize
+let bornSize;
 
 const removeAllActiveClasses = () => {
     tabs.forEach((tab) => {
@@ -60,7 +60,7 @@ const manageIcons = () => {
         leftArrowContainer.classList.remove("active");
     }
 
-    let maxScrollValue = tabsList.scrollWidth - tabsList.clientWidth - 20;
+    const maxScrollValue = tabsList.scrollWidth - tabsList.clientWidth - 20;
 
     if (tabsList.scrollLeft >= maxScrollValue) {
         rightArrowContainer.classList.remove("active");
@@ -88,9 +88,9 @@ let dragging = false;
 
 const drag = (e) => {
     if (!dragging) return;
-    tabsList.classList.add("dragging")
+    tabsList.classList.add("dragging");
     tabsList.scrollLeft -= e.movementX;
-}
+};
 
 tabsList.addEventListener("mousedown", () => {
     dragging = true;
@@ -100,7 +100,7 @@ tabsList.addEventListener("mousemove", drag);
 
 document.addEventListener("mouseup", () => {
     dragging = false;
-    tabsList.classList.remove("dragging")
+    tabsList.classList.remove("dragging");
 });
 
 

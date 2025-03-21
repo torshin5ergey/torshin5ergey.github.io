@@ -33,7 +33,7 @@ function draw() {
  * @returns {Array<Array<number>>} array - 2D cells values array
  */
 function generateRandomCells() {
-  let array = [];
+  const array = [];
   for (let i = 0; i < WIDTH; i++) {
     array[i] = [];
     for (let j = 0; j < HEIGHT; j++) {
@@ -85,11 +85,11 @@ function drawCellsField(array) {
  * @returns {Array<Array<number>>} Updated cells array.
  */
 function updateCellsField(array) {
-  let newCells = JSON.parse(JSON.stringify(cells));
+  const newCells = JSON.parse(JSON.stringify(cells));
   for (let x = 0; x < WIDTH; x++) {
     for (let y = 0; y < HEIGHT; y++) {
-      let neighbors = getNeighboringCoordinates(x, y);
-      let numNeighbors = countLivingNeighbors(array, x, y, neighbors);
+      const neighbors = getNeighboringCoordinates(x, y);
+      const numNeighbors = countLivingNeighbors(array, x, y, neighbors);
       newCells[x][y] = getCellNewValue(array, x, y, numNeighbors);
     }
   }
