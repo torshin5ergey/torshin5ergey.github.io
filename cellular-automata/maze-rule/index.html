@@ -5,41 +5,49 @@ Written by Sergey Torshin @torshin5ergey
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
-    <title>maze rule</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/png" href="/static/favicon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
-  </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+  <title>maze rule</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="/static/favicon.png">
 
-  <body>
-    <div id="header-container"></div>
-    <div class="container">
-      <div id="canvas" class="canvas-container no-scroll-area">
-        <p class="caption-top-left">maze rule</p>
-        <p class="caption-bot-right">@torshin5ergey</p>
-      </div>
-      <div class="description">
-        <p>
-        Maze rule is a one-dimensional binary <a href="https://en.wikipedia.org/wiki/Cellular_automaton">cellular automation</a>. The simulation consists of a grid of cells, each of which can be in one of two states: alive or dead. At each step of the simulation, cells transition between these states according to rule B3/S12345:
-        </p>
-        <ul>
-          <li>Birth (B3): A dead cell (state 0) with exactly 3 live neighbors becomes a live cell (state 1). This single condition is what "creates" new cells.</li>
-          <li>Survival (S12345): A live cell (state 1) continues to live if it has 1, 2, 3, 4, or 5 live neighbors. This broad range allows for the creation of various stable structures.</li>
-          <li>Death: In all other cases, cells die or remain dead.</li>
-        <ul>
-      </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+</head>
+
+<body>
+  <div id="header-container"></div>
+  <div class="container">
+    <div id="canvas" class="canvas-container no-scroll-area">
+      <p class="caption-top-left">maze rule</p>
+      <p class="caption-bot-right">@torshin5ergey</p>
     </div>
-    <div id="footer-container"></div>
+    <div class="description">
+      <p>
+        Maze rule is a one-dimensional binary <a href="https://en.wikipedia.org/wiki/Cellular_automaton">cellular
+          automation</a>. The simulation consists of a grid of cells, each of which can be in one of two states: alive
+        or dead. At each step of the simulation, cells transition between these states according to rule B3/S12345:
+      </p>
+      <ul>
+        <li>Birth (B3): A dead cell (state 0) with exactly 3 live neighbors becomes a live cell (state 1). This single
+          condition is what "creates" new cells.</li>
+        <li>Survival (S12345): A live cell (state 1) continues to live if it has 1, 2, 3, 4, or 5 live neighbors. This
+          broad range allows for the creation of various stable structures.</li>
+        <li>Death: In all other cases, cells die or remain dead.</li>
+      </ul>
+    </div>
+  </div>
+  <div id="footer-container"></div>
 
-    <script src="/static/header-loader.js"></script>
-    <script src="sketch.js"></script>
-    <script src="/static/no-scroll.js"></script>
-    <script src="/static/footer-loader.js"></script>
-  </body>
+  <script src="/static/header-loader.js"></script>
+  <script src="sketch.js"></script>
+  <script src="/static/no-scroll.js"></script>
+  <script src="/static/footer-loader.js"></script>
+</body>
+
 </html>
