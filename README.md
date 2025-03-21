@@ -1,3 +1,11 @@
+- [Repository Structure](#repository-structure)
+- [How to Use](#how-to-use)
+- [Projects](#projects)
+- [GitHub Pages Deployment](#github-pages-deployment)
+- [License](#license)
+- [Author](#author)
+
+
 # Coding.exe 🎨
 
 This is my digital generative computer graphics exhibition.
@@ -17,6 +25,17 @@ I'm exploring various techniques and tools for creating generative art. One of m
 ## Projects
 
 - [cellular-automata](./cellular-automata/): a collection of creative code projects based on cellular automata rules.
+
+## GitHub Pages Deployment
+
+Implemented a full deployment workflow following [roadmap.sh DevOps "GitHub Pages Deployment" project](https://roadmap.sh/projects/github-actions-deployment-workflow):
+
+- **Lint job**
+    HTML, CSS, JS lintingon every push.
+- **Deployment job**
+    Github Pages deployment and dependency caching.
+
+[View workflow file](.github/workflows/static.yml)
 
 ## License
 
