@@ -28,7 +28,7 @@ I'm exploring various techniques and tools for creating generative art. One of m
 
 ## GitHub Pages Deployment
 
-Implemented a full deployment workflow following [roadmap.sh DevOps "GitHub Pages Deployment" project](https://roadmap.sh/projects/github-actions-deployment-workflow):
+Implemented an advanced deployment workflow. This is my solution to the [GitHub Pages Deployment project](https://roadmap.sh/projects/github-actions-deployment-workflow) in the [DevOps roadmap](https://roadmap.sh/devops) from [roadmap.sh](https://roadmap.sh/).
 
 - **Lint job**
     HTML, CSS, JS lintingon every push.
@@ -36,6 +36,7 @@ Implemented a full deployment workflow following [roadmap.sh DevOps "GitHub Page
     Github Pages deployment and dependency caching.
 
 [View workflow file](.github/workflows/static.yml)
+Project URL: https://roadmap.sh/projects/github-actions-deployment-workflow
 
 ## License
 
