@@ -4,8 +4,7 @@ body {
   padding: 0;
   font-family: "Reddit Mono", monospace;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   background-color: #2f2f2f;
@@ -39,9 +38,13 @@ body {
 p {
   padding: 0;
   margin: 0;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+
+  /* Safari */
+
+  /* IE 10 and IE 11 */
+  user-select: none;
+
+  /* Standard syntax */
 }
 
 .caption-top-left {
@@ -61,7 +64,7 @@ p {
 }
 
 .description {
-  margin: 26px 0 0 0;
+  margin: 26px 0 0;
   align-items: center;
 }
 
@@ -72,7 +75,7 @@ p {
 
 .description ul li {
   margin: 0;
-  
+
 }
 
 .description a {
@@ -80,14 +83,17 @@ p {
   text-decoration: underline;
 }
 
-table, th, td {
+table,
+th,
+td {
   margin: 12px auto 0;
   width: 100%;
   border: 1px solid #606064;
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   text-align: center;
   position: relative;
   width: fit-content;
@@ -108,7 +114,7 @@ tr {
   padding: 6px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (width >= 600px) {
   /* For tablets: */
   .canvas-container {
     width: 46%;
@@ -121,7 +127,7 @@ tr {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (width >= 768px) {
   /* For desktops: */
   .canvas-container {
     width: 46%;

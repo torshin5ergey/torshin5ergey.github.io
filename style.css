@@ -1,76 +1,76 @@
 html,
 body {
-    padding:0;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: "Reddit Mono", monospace;
-    font-size: 14px;
-    background-color: #2f2f2f;
-    color: #E8E9F3;
-    font-size: 16px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Reddit Mono", monospace;
+  background-color: #2f2f2f;
+  color: #E8E9F3;
+  font-size: 16px;
 }
 
 .about a {
-    color: #E8E9F3;
+  color: #E8E9F3;
 }
 
 .root-container {
-    margin: 60px auto;
-    width: 85%;
+  margin: 60px auto;
+  width: 85%;
 }
 
 .about {
-    margin: 120px 0 24px;
+  margin: 120px 0 24px;
 }
 
 .row {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    padding: 0 4px;
-    justify-content: space-between;
-    margin: 0 15px;
+  /* IE10 */
+  display: flex;
+
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: space-between;
+  margin: 0 15px;
 }
 
 .column {
-    -ms-flex: 100%; /* IE10 */
-    flex: 100%;
-    max-width: 100%;
-    padding: 0 4px;
+  /* IE10 */
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
 }
 
 .column img {
-    margin-top: 42px;
-    vertical-align: middle;
-    width: 100%;
-    transition: filter 0.5s ease;
+  margin-top: 42px;
+  vertical-align: middle;
+  width: 100%;
+  transition: filter 0.5s ease;
 }
 
 .column img:hover {
-    filter: brightness(125%)
+  filter: brightness(125%)
 }
 
 .box {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
 }
 
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
+@media only screen and (width >=600px) {
+  /* For tablets: */
 }
 
-@media only screen and (min-width: 768px) {
-    /* For desktops: */
-    .root-container {
-        margin: 60px auto;
-        width: 75%;
-    }
+@media only screen and (width >=768px) {
+  /* For desktops: */
+  .root-container {
+    margin: 60px auto;
+    width: 75%;
+  }
 
-    .column {
-        -ms-flex: 30%; /* IE10 */
-        flex: 30%;
-        max-width: 30%;
-        padding: 0 4px;
-    }
+  .column {
+    /* IE10 */
+    flex: 30%;
+    max-width: 30%;
+    padding: 0 4px;
+  }
 }
