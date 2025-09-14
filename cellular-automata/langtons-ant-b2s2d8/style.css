@@ -1,0 +1,102 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Reddit Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f2f2f;
+  color: #E8E9F3;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 85%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.canvas-container {
+  position: relative;
+  max-width: 600px;
+  max-height: 600px;
+  overflow: hidden;
+  box-shadow: 0 0 20px black;
+  aspect-ratio: 1/1;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.caption-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2f2f2f;
+  padding: 10px 16px;
+}
+
+.caption-bot-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #2f2f2f;
+  padding: 10px 16px;
+}
+
+.description {
+  margin: 26px 0 0 0;
+  align-items: center;
+}
+
+.description ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.description ul li {
+  margin: 0;
+  
+}
+
+.description a {
+  color: #E8E9F3;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .canvas-container {
+    width: 46%;
+    margin: 0 auto;
+  }
+
+  .description {
+    margin: 0 auto;
+    width: 46%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktops: */
+  .canvas-container {
+    width: 46%;
+    margin: 0 auto;
+  }
+}
