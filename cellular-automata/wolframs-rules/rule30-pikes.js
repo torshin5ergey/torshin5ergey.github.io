@@ -15,7 +15,7 @@ function setup() {
   rule = "rule30"; // rule30, rule120, rule135, rule225
 
   canvas = createCanvas(windowWidth, windowHeight);
-  canvas.parent("sketch-container")
+  canvas.parent("sketch-container");
   colorMode(RGB, 255, 255, 255, 1);
   BG = color("rgb(47, 47, 47)"); // Background color
   FG = color("rgb(232, 233, 243"); // Foreground color
@@ -40,7 +40,7 @@ function draw() {
  * @returns {Array<Array<number>>} 2D array filled with zeros.
  */
 function generateZerosField() {
-  let array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
+  const array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
   return array;
 }
 
@@ -112,17 +112,17 @@ function drawCell(x, y, state) {
  * @returns {Array<Array<number>>} The modified array with updated cell states according to Rule 184.
  */
 function updateCells(array, rule) {
-  let newCells = JSON.parse(JSON.stringify(array));
+  const newCells = JSON.parse(JSON.stringify(array));
   for (let x = 0; x < WIDTH; x++) {
     for (let y = 0; y < HEIGHT ; y++) {
-      let cur = array[x][y];
-      let top = array[x][(y - 1 + HEIGHT) % HEIGHT];
-      let bottom = array[x][(y + 1 + HEIGHT) % HEIGHT];
-      let left = array[(x - 1 + WIDTH) % WIDTH][y];
-      let right = array[(x + 1 + WIDTH) % WIDTH][y];
-      let curPat = [left, cur, right]; // Current pattern
+      const cur = array[x][y];
+      const top = array[x][(y - 1 + HEIGHT) % HEIGHT];
+      const bottom = array[x][(y + 1 + HEIGHT) % HEIGHT];
+      const left = array[(x - 1 + WIDTH) % WIDTH][y];
+      const right = array[(x + 1 + WIDTH) % WIDTH][y];
+      const curPat = [left, cur, right]; // Current pattern
       // Define new cell state
-      let newState = applyRule(rule, curPat);
+      const newState = applyRule(rule, curPat);
       newCells[x][y+1] = newState;
     }
   }
@@ -195,7 +195,7 @@ function applyRule(rule, pattern) {
       pattern.toString() === [0, 0, 1].toString()
   ) {
       return 0;
-  }  
+  }
   }
   else {
     return 0;

@@ -15,7 +15,7 @@ function setup() {
   isForward = true;
 
   colorMode(RGB, 255, 255, 255, 1);
-  fgColor = [color("rgb(124, 234, 156)"), color("rgb(247, 172, 207)"), color("rgb(85, 214, 190)"), color("rgb(104, 116, 232)")]
+  fgColor = [color("rgb(124, 234, 156)"), color("rgb(247, 172, 207)"), color("rgb(85, 214, 190)"), color("rgb(104, 116, 232)")];
   fgColor1 = random(fgColor);
   fgColor2 = random(fgColor);
   BG = color("rgb(47, 47, 47)"); // Background color
@@ -54,7 +54,7 @@ function draw() {
  * @returns {Array<Array<number>>} 2D array filled with zeros.
  */
 function generateZerosField() {
-  let array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
+  const array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
   return array;
 }
 
@@ -127,13 +127,13 @@ function drawCellsField(array) {
  * @returns {Array<Array<number>>} The modified array with updated cell states according to Rule 184.
  */
 function updateCells(array) {
-  let newCells = JSON.parse(JSON.stringify(array));
+  const newCells = JSON.parse(JSON.stringify(array));
   for (let x = 0; x < WIDTH; x++) {
     for (let y = 0; y < HEIGHT; y++) {
-      let cur = array[x][y];
-      let left = array[(x - 1 + WIDTH) % WIDTH][y];
-      let right = array[(x + 1 + WIDTH) % WIDTH][y];
-      let curPat = [left, cur, right]; // Current pattern
+      const cur = array[x][y];
+      const left = array[(x - 1 + WIDTH) % WIDTH][y];
+      const right = array[(x + 1 + WIDTH) % WIDTH][y];
+      const curPat = [left, cur, right]; // Current pattern
       // Define new cell state
       if (
         curPat.toString() === [1, 1, 1].toString() ||
@@ -162,7 +162,7 @@ function updateCells(array) {
  * @returns {Array<Array<number>>} The modified array with cells in the specified row reset to 0.
  */
 function resetCells(array, row) {
-  let newCells = JSON.parse(JSON.stringify(array)); // Copy the array
+  const newCells = JSON.parse(JSON.stringify(array)); // Copy the array
   for (let x = 0; x < WIDTH; x++) {
     newCells[x][row] = 0; // Cell state to 0
   }

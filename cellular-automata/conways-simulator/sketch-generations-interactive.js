@@ -38,8 +38,8 @@ function draw() {
  * @returns {Array<Array<number>>} array - Updated cells
  */
 function bornLife(array) {
-  let x = constrain(floor(mouseX/CELL_W), bornSize, WIDTH-bornSize-1);
-  let y = constrain(floor(mouseY/CELL_H), bornSize, HEIGHT-bornSize-1);
+  const x = constrain(floor(mouseX/CELL_W), bornSize, WIDTH-bornSize-1);
+  const y = constrain(floor(mouseY/CELL_H), bornSize, HEIGHT-bornSize-1);
   for (let i = -bornSize; i <= bornSize; i++) {
     for (let j = -bornSize; j <=bornSize; j++) {
       if ((i + j) % 2 === 0) {
@@ -63,7 +63,7 @@ function drawCell(x, y, h, w, state) {
   if (state == 0) {
     fill(0, 0, 18); // Background color with low alpha
   } else {
-    let brightnessValue = map(state, 0, generations, 18, 95);
+    const brightnessValue = map(state, 0, generations, 18, 95);
     fill(235, 5, brightnessValue); // Foreground color with dynamic brightness
   }
   rect(x * w, y * h, w, h);
@@ -88,11 +88,11 @@ function drawCellsField(array) {
  * @returns {Array<Array<number>>} Updated cells array.
  */
 function updateCellsField(array) {
-  let newCells = JSON.parse(JSON.stringify(cells));
+  const newCells = JSON.parse(JSON.stringify(cells));
   for (let x = 0; x < WIDTH; x++) {
     for (let y = 0; y < HEIGHT; y++) {
-      let neighbors = getNeighboringCoordinates(x, y);
-      let numNeighbors = countLivingNeighbors(array, x, y, neighbors);
+      const neighbors = getNeighboringCoordinates(x, y);
+      const numNeighbors = countLivingNeighbors(array, x, y, neighbors);
       newCells[x][y] = getCellNewValue(array, x, y, numNeighbors);
     }
   }
@@ -156,5 +156,5 @@ function getCellNewValue(array, x, y, count) {
 }
 
 function mouseClicked() {
-    return
+    return;
   }

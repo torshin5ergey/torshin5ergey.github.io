@@ -1,0 +1,27 @@
+{
+  "name": "torshin5ergey.github.io",
+  "version": "1.0.0",
+  "description": "This is my digital generative computer graphics exhibition. I'm exploring various techniques and tools for creating generative art. One of my favorite tools is [p5.js](https://editor.p5js.org/torshin5ergey/sketches), a JavaScript library that makes it incredibly easy to create and share visual art. [Visit]() the digital exhibition website.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torshin5ergey/torshin5ergey.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/torshin5ergey/torshin5ergey.github.io/issues"
+  },
+  "homepage": "https://github.com/torshin5ergey/torshin5ergey.github.io#readme",
+  "devDependencies": {
+    "eslint": "^9.22.0",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.16.0",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}

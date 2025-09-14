@@ -1,4 +1,5 @@
-# coding.exe 🎨
+
+# Coding.exe 🎨
 
 This is my digital generative computer graphics exhibition.
 I'm exploring various techniques and tools for creating generative art. One of my favorite tools is [p5.js](https://editor.p5js.org/torshin5ergey/sketches), a JavaScript library that makes it incredibly easy to create and share visual art.
@@ -18,9 +19,21 @@ I'm exploring various techniques and tools for creating generative art. One of m
 
 - [cellular-automata](./cellular-automata/): a collection of creative code projects based on cellular automata rules.
 
+## GitHub Pages Deployment
+
+Implemented an advanced deployment workflow. This is my solution to the [GitHub Pages Deployment project](https://roadmap.sh/projects/github-actions-deployment-workflow) in the [DevOps roadmap](https://roadmap.sh/devops) from [roadmap.sh](https://roadmap.sh/).
+
+- **Lint job**
+    HTML, CSS, JS lintingon every push.
+- **Deployment job**
+    Github Pages deployment and dependency caching.
+
+[View workflow file](.github/workflows/static.yml)
+Project URL: https://roadmap.sh/projects/github-actions-deployment-workflow
+
 ## License
 
-Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 This repository is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
@@ -31,6 +44,6 @@ This repository is licensed under a
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
-## Author 
+## Author
 
 Sergey Torshin [@torshin5ergey](https://github.com/torshin5ergey)

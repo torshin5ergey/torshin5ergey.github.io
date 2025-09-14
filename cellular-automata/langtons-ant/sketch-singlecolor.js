@@ -50,7 +50,7 @@ function setup() {
 function draw() {
   drawCellsField(cells);
   drawAnts(ants);
-  let updated = moveAnts(ants, cells);
+  const updated = moveAnts(ants, cells);
 }
 
 /**
@@ -58,7 +58,7 @@ function draw() {
  * @returns {Array<Array<number>>} 2D array filled with zeros.
  */
 function generateZerosField() {
-  let array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
+  const array = new Array(WIDTH).fill(0).map(() => new Array(HEIGHT).fill(0));
   return array;
 }
 
@@ -116,7 +116,7 @@ function drawCellsField(array) {
  */
 function drawAnts(ants) {
   for (let i = 0; i < ANTS_COUNT; i++) {
-    let ant = ants[i];
+    const ant = ants[i];
     fill(ant.colour);
     rect(ant.x * CELL_W, ant.y * CELL_H, CELL_W, CELL_H);
   }
@@ -131,16 +131,16 @@ function drawAnts(ants) {
  */
 function moveAnts(ants, array) {
   for (let i = 0; i < ANTS_COUNT; i++) {
-    let ant = ants[i];
-    let antX = ant.x;
-    let antY = ant.y;
-    let antDir = ant.direction;
+    const ant = ants[i];
+    const antX = ant.x;
+    const antY = ant.y;
+    const antDir = ant.direction;
     // Rules for the current ant position
-    let directionRules = RULES[antDir];
+    const directionRules = RULES[antDir];
     // Current cell value
-    let cellValue = array[antX][antY];
+    const cellValue = array[antX][antY];
     // Rules for current ant direction in current cell
-    let currentRules = directionRules[cellValue];
+    const currentRules = directionRules[cellValue];
     // Update ant direction
     ant.direction = currentRules.direction;
     // Update ant position

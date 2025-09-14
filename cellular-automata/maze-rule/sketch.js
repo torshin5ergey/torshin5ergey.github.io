@@ -20,7 +20,7 @@ const FG = "#E8E9F3"; // Foreground color
 const BG = "#2F2F2F"; // Background color
 
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight);
+  const canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("canvas");
   colorMode(RGB, 255, 255, 255, 1);
   frameRate(60);
@@ -42,7 +42,7 @@ function draw() {
  * @returns {Array<Array<number>>} array - 2D cells values array
  */
 function generateRandomCells(N, M) {
-  let array = [];
+  const array = [];
   for (let i = 0; i < N; i++) {
     array[i] = [];
     for (let j = 0; j < M; j++) {
@@ -89,11 +89,11 @@ function drawCellsField(array) {
  * @returns {Array<Array<number>>} Updated cells array.
  */
 function updateCellsField(array) {
-  let newCells = JSON.parse(JSON.stringify(cells));
+  const newCells = JSON.parse(JSON.stringify(cells));
   for (let x = 0; x < WIDTH; x++) {
     for (let y = 0; y < HEIGHT; y++) {
-      let neighbors = getNeighboringCoordinates(x, y);
-      let numNeighbors = countLivingNeighbors(array, x, y, neighbors);
+      const neighbors = getNeighboringCoordinates(x, y);
+      const numNeighbors = countLivingNeighbors(array, x, y, neighbors);
       newCells[x][y] = getCellNewValue(array, x, y, numNeighbors);
     }
   }
@@ -157,7 +157,7 @@ function getCellNewValue(array, x, y, count) {
 }
 
 function createStartPattern(pattern) {
-  let initialCells = [];
+  const initialCells = [];
 
   // Initialize the cells array
   for (let i = 0; i < WIDTH; i++) {
@@ -167,13 +167,13 @@ function createStartPattern(pattern) {
     }
   }
   // Determine the starting position for the pattern
-  let startX = Math.floor((WIDTH - pattern[0].length) / 2);
-  let startY = Math.floor((HEIGHT - pattern.length) / 2);
+  const startX = Math.floor((WIDTH - pattern[0].length) / 2);
+  const startY = Math.floor((HEIGHT - pattern.length) / 2);
   // Apply the pattern to the cells array
   for (let i = 0; i < pattern.length; i++) {
     for (let j = 0; j < pattern[i].length; j++) {
-      let x = startX + j;
-      let y = startY + i;
+      const x = startX + j;
+      const y = startY + i;
       initialCells[x][y] = pattern[i][j];
     }
   }
