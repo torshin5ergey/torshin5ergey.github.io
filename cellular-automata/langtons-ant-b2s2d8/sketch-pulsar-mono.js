@@ -39,7 +39,7 @@ function draw() {
  * @returns {Array<Array<number>>} - 2D cells values array
  */
 function generateRandomCells(fillPercentage) {
-  let array = [];
+  const array = [];
   for (let i = 0; i < WIDTH; i++) {
     array[i] = [];
     for (let j = 0; j < HEIGHT; j++) {
@@ -63,7 +63,7 @@ function drawCell(x, y, h, w, state) {
   if (state == 0) {
     fill(0, 0, 18); // Background color with low alpha
   } else {
-    let brightnessValue = map(state, 0, generations, 18, 95);
+    const brightnessValue = map(state, 0, generations, 18, 95);
     fill(235, 5, brightnessValue); // Foreground color with dynamic brightness
   }
   rect(x * w, y * h, w, h);
@@ -88,11 +88,11 @@ function drawCellsField(array) {
  * @returns {Array<Array<number>>} Updated cells array.
  */
 function updateCellsField(array) {
-  let newCells = JSON.parse(JSON.stringify(cells));
+  const newCells = JSON.parse(JSON.stringify(cells));
   for (let x = 0; x < WIDTH; x++) {
     for (let y = 0; y < HEIGHT; y++) {
-      let neighbors = getNeighboringCoordinates(x, y);
-      let numNeighbors = countLivingNeighbors(array, x, y, neighbors);
+      const neighbors = getNeighboringCoordinates(x, y);
+      const numNeighbors = countLivingNeighbors(array, x, y, neighbors);
       newCells[x][y] = getCellNewValue(array, x, y, numNeighbors);
     }
   }
@@ -162,8 +162,8 @@ function getCellNewValue(array, x, y, count) {
  * @returns {Array<Array<number>>} - The array with the centered square.
  */
 function generateCenteredSquare(array, squareSize) {
-  let startX = Math.floor((WIDTH - squareSize) / 2);
-  let startY = Math.floor((HEIGHT - squareSize) / 2);
+  const startX = Math.floor((WIDTH - squareSize) / 2);
+  const startY = Math.floor((HEIGHT - squareSize) / 2);
 
   for (let i = startX; i < startX + squareSize; i++) {
     for (let j = startY; j < startY + squareSize; j++) {
