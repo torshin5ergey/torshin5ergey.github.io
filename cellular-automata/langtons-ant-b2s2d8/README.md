@@ -27,12 +27,12 @@ You can also view this project online in p5.js Web Editor [here](https://editor.
 let canvas = createCanvas(windowWidth, windowHeight);
 canvas.parent("canvas");
 ```
-You can modify the dimensions passed to createCanvas() to adjust the size of the canvas. Additionally, you may need to change the parent element ID passed to canvas.parent().
+You can modify the dimensions passed to `createCanvas()` to adjust the size of the canvas. Additionally, you may need to change the parent element ID passed to `canvas.parent()`.
 Alternatively, you can use the following line and comment out the two lines above to use a fixed canvas size:
 ```javascript
 createCanvas(CANVAS_W, CANVAS_H);
 ```
-Change CANVAS_W and CANVAS_H with the desired width and height of the canvas.
+Change `CANVAS_W` and `CANVAS_H` with the desired width and height of the canvas.
 
 ## License
 
