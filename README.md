@@ -18,6 +18,7 @@ I'm exploring various techniques and tools for creating generative art. One of m
 ## Projects
 
 - [cellular-automata](./cellular-automata/): a collection of creative code projects based on cellular automata rules.
+- [drafts](./drafts/): some creative code draft sketches.
 
 ## GitHub Pages Deployment
 
