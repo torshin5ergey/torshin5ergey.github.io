@@ -16,6 +16,7 @@ function openRandomArt() {
         '/cellular-automata/langtons-ant-b2s2d8/index.html',
         '/cellular-automata/maze-rule/index.html',
         '/cellular-automata/wolframs-rules/index.html',
+        '/drafts/dangerous-web/index.html',
     ];
     const randomPage = pages[Math.floor(Math.random() * pages.length)];
     window.location.href = randomPage;
