@@ -36,10 +36,10 @@ tabs.forEach(tab => {
         // Load the selected sketch
         const sketchId = tab.getAttribute("data-sketch");
         if (sketchId === "pulsar-mono") {
-            captionTopLeft.textContent = "langton's ant b2s2d8 pulsar mono";
+            captionTopLeft.textContent = "conways b1s2g8 pulsar mono";
             loadScript("sketch-pulsar-mono.js");
         } else if (sketchId === "frost-pattern") {
-            captionTopLeft.textContent = "langton's ants b2s2d8 frost pattern";
+            captionTopLeft.textContent = "conways b1s2g8 frost pattern";
             loadScript("sketch-frost-pattern.js");
         }
 
