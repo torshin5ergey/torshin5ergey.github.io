@@ -7,11 +7,11 @@ const BG = "#2F2F2F";
 const FG = "#E8E9F3";
 
 const minRadius = 2;
-const maxRadius = 400;
+const maxRadius = 340;
 const step = 80;
 
 function setup() {
-  const canvas = createCanvas(600, 600);
+  const canvas = createCanvas(500, 500);
   canvas.parent("canvas");
 
   frameRate(60);

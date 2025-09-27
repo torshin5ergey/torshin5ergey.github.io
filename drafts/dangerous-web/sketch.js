@@ -14,7 +14,7 @@ const circleRadius = 100; // circle movement radius
 let angle = 0;
 
 function setup() {
-  const canvas = createCanvas(600, 600);
+  const canvas = createCanvas(500, 500);
   canvas.parent("canvas");
 
   frameRate(60);
