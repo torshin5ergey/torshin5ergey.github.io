@@ -1,11 +1,11 @@
 # Chris Langton's Ant (rule b2s2d8) with p5.js
 
-Chris Langton's cellular automaton "Langton's ant" with B2S2D8 rule in JavaScript using p5.js.
+Conway's "Game of Life" cellular automaton variation with B1S2G8 rule in JavaScript using p5.js.
 
 ![demo](assets/preview-demo.gif)
 
 ## Description
-This project implements [Langton's ant](https://en.wikipedia.org/wiki/Langton's_ant), a cellular automaton devised by Chris Langton in 1986. Langton's ant is a two-dimensional Turing machine with very simple rules but exhibits complex emergent behavior.
+This project implements John Conway's [Game of Life](https://w.wiki/3kQz) cellular automaton with multi-state cells (0-8) that simulates a gradual dying process. The rules are based on neighbor counts.
 
 ## Rules
 
@@ -15,14 +15,14 @@ This project implements [Langton's ant](https://en.wikipedia.org/wiki/Langton's_
 
 ## View Online
 
-You can also view this project online in p5.js Web Editor [here](https://editor.p5js.org/torshin5ergey/full/m_3P4vz-y) or on this project page [here](https://torshin5ergey.github.io/cellular-automata/langtons-ant-b2s2d8/index.html).
+You can also view this project online in p5.js Web Editor [here](https://editor.p5js.org/torshin5ergey/full/m_3P4vz-y) or on this project page [here](https://torshin5ergey.github.io/cellular-automata/conways-b1s2g8/index.html).
 
 ## How to Use in Your Project
 
 1. Clone the repository to your computer.
 2. Include `p5.js` in your project.
-3. Import `sketch-pulsar-mono.js` or `sketch-frost-pattern.js` into your project and use it in your code.
-4. If needed, you may need to adjust the following lines in the `sketch-pulsar-mono.js` or `sketch-frost-pattern.js` file to fit your desired canvas size or container element:
+3. Import `sketch-pulsar-mono.js`, `sketch-pulsar-color.js` or `sketch-frost-pattern.js` into your project and use it in your code.
+4. If needed, you may need to adjust the following lines in the `sketch-pulsar-mono.js`, `sketch-pulsar-color.js` or `sketch-frost-pattern.js` file to fit your desired canvas size or container element:
 ```javascript
 let canvas = createCanvas(windowWidth, windowHeight);
 canvas.parent("canvas");

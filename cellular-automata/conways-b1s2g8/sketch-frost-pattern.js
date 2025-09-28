@@ -1,4 +1,5 @@
-/* Conway's Game of Life simulator with generations
+/*
+Conways generations b1s2g8 rule random mono color
 Written by Sergey Torshin @torshin5ergey
 */
 

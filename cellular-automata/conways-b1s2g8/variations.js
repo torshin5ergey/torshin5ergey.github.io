@@ -41,6 +41,9 @@ tabs.forEach(tab => {
         } else if (sketchId === "frost-pattern") {
             captionTopLeft.textContent = "conways b1s2g8 frost pattern";
             loadScript("sketch-frost-pattern.js");
+        } else if (sketchId === "pulsar-color") {
+            captionTopLeft.textContent = "conways b1s2g8 pulsar color";
+            loadScript("sketch-pulsar-color.js");
         }
 
         // Update description

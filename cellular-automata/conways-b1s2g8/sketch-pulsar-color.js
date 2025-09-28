@@ -1,5 +1,5 @@
 /*
-Conways generations b1s2g8 rule pulsar mono color
+Conways generations b1s2g8 rule pulsar heatmap color
 Written by Sergey Torshin @torshin5ergey
 */
 
@@ -64,8 +64,10 @@ function drawCell(x, y, h, w, state) {
   if (state == 0) {
     fill(0, 0, 18); // Background color with low alpha
   } else {
-    const brightnessValue = map(state, 0, generations, 18, 95);
-    fill(235, 5, brightnessValue); // Foreground color with dynamic brightness
+    let brightnessValue = map(state, 0, generations, 18, 90);
+    let saturationValue = map(state, 0, generations, 0, 68);
+    let hueValue = map(state, 0, generations, 300, 18);
+    fill(hueValue, saturationValue, brightnessValue); // Foreground color with dynamic brightness
   }
   rect(x * w, y * h, w, h);
 }
