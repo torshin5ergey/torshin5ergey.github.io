@@ -5,6 +5,7 @@ Conway's "Game of Life" cellular automaton variation with b1s2g8 rule in JavaScr
 ![demo](assets/preview-demo.gif)
 
 ## Description
+
 This project implements John Conway's [Game of Life](https://w.wiki/3kQz) cellular automaton with multi-state cells (0-8) that simulates a gradual dying process. The rules are based on neighbor counts.
 
 ## Rules
