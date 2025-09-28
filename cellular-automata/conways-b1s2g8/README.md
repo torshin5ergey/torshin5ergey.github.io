@@ -1,6 +1,6 @@
-# Chris Langton's Ant (rule b2s2d8) with p5.js
+# Conway's Game of Life (rule b1s2g8) with p5.js
 
-Conway's "Game of Life" cellular automaton variation with B1S2G8 rule in JavaScript using p5.js.
+Conway's "Game of Life" cellular automaton variation with b1s2g8 rule in JavaScript using p5.js.
 
 ![demo](assets/preview-demo.gif)
 
