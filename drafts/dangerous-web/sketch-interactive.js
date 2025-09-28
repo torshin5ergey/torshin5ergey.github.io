@@ -14,8 +14,12 @@ let canvas_width = document.getElementById('canvas').offsetWidth;
 let canvas_height = document.getElementById('canvas').offsetHeight;
 
 function setup() {
-  const canvas = createCanvas(canvas_width, canvas_height);
+  const canvas = createCanvas(600, 600);
   canvas.parent("canvas");
+
+  canvas_width = document.getElementById('canvas').offsetWidth;
+  canvas_height = document.getElementById('canvas').offsetHeight;
+  resizeCanvas(canvas_width, canvas_height);
 
   frameRate(60);
   noCursor();
