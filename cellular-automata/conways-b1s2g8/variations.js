@@ -19,7 +19,8 @@ const descriptionText = document.querySelector(".description .description-text")
 const captionTopLeft = document.querySelector(".caption-top-left");
 // Sketches variable
 let currentScript;
-let CANVAS_W, CANVAS_H, WIDTH, HEIGHT, CELL_W, CELL_H, cells, FG, BG, canvas, generations;
+let CANVAS_W, CANVAS_H, WIDTH, HEIGHT, CELL_W, CELL_H, cells, FG, BG, canvas, 
+generations, brightnessValue, saturationValue, hueValue;
 
 const removeAllActiveClasses = () => {
     tabs.forEach((tab) => {
