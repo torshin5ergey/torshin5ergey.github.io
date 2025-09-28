@@ -7,11 +7,14 @@ const BG = "#2F2F2F";
 const FG = "#E8E9F3";
 
 const minRadius = 2;
-const maxRadius = 340;
-const step = 80;
+const maxRadius = 200;
+const step = 50;
+
+let canvas_width = document.getElementById('canvas').offsetWidth;
+let canvas_height = document.getElementById('canvas').offsetHeight;
 
 function setup() {
-  const canvas = createCanvas(500, 500);
+  const canvas = createCanvas(canvas_width, canvas_height);
   canvas.parent("canvas");
 
   frameRate(60);
@@ -21,6 +24,10 @@ function setup() {
 }
 
 function draw() {
+  canvas_width = document.getElementById('canvas').offsetWidth;
+  canvas_height = document.getElementById('canvas').offsetHeight;
+  resizeCanvas(canvas_width, canvas_height);
+
   background(BG);
   const parallaxX = map(mouseX, 0, width, -25, 25);
   const parallaxY = map(mouseY, 0, height, -25, 25);

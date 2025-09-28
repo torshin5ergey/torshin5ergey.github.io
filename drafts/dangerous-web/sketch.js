@@ -13,8 +13,11 @@ const step = 80;
 const circleRadius = 100; // circle movement radius
 let angle = 0;
 
+let canvas_width = document.getElementById('canvas').offsetWidth;
+let canvas_height = document.getElementById('canvas').offsetHeight;
+
 function setup() {
-  const canvas = createCanvas(500, 500);
+  const canvas = createCanvas(canvas_width, canvas_height);
   canvas.parent("canvas");
 
   frameRate(60);
@@ -24,6 +27,10 @@ function setup() {
 }
 
 function draw() {
+  canvas_width = document.getElementById('canvas').offsetWidth;
+  canvas_height = document.getElementById('canvas').offsetHeight;
+  resizeCanvas(canvas_width, canvas_height);
+
   background(BG);
   const parallaxX = map(width/2, 0, width, -25, 25);
   const parallaxY = map(height/2, 0, height, -25, 25);
