@@ -13,10 +13,11 @@ function openRandomArt() {
     const pages = [
         '/cellular-automata/conways-simulator/index.html',
         '/cellular-automata/langtons-ant/index.html',
-        '/cellular-automata/langtons-ant-b2s2d8/index.html',
+        '/cellular-automata/conways-b1s2g8/index.html',
         '/cellular-automata/maze-rule/index.html',
         '/cellular-automata/wolframs-rules/index.html',
         '/drafts/dangerous-web/index.html',
+        '/cellular-automata/conways-b1s0g8/index.html',
     ];
     const randomPage = pages[Math.floor(Math.random() * pages.length)];
     window.location.href = randomPage;
