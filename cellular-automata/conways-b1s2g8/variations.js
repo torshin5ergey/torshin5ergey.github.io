@@ -45,6 +45,9 @@ tabs.forEach(tab => {
         } else if (sketchId === "pulsar-color") {
             captionTopLeft.textContent = "conways b1s2g8 pulsar color";
             loadScript("sketch-pulsar-color.js");
+        } else if (sketchId === "random-color") {
+            captionTopLeft.textContent = "conways b1s2g8 random color";
+            loadScript("sketch-random-color.js");
         }
 
         // Update description
