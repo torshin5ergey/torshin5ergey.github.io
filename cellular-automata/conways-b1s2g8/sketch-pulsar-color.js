@@ -64,9 +64,9 @@ function drawCell(x, y, h, w, state) {
   if (state == 0) {
     fill(0, 0, 18); // Background color with low alpha
   } else {
-    let brightnessValue = map(state, 0, generations, 18, 90);
-    let saturationValue = map(state, 0, generations, 0, 68);
-    let hueValue = map(state, 0, generations, 300, 18);
+    const brightnessValue = map(state, 0, generations, 18, 90);
+    const saturationValue = map(state, 0, generations, 0, 68);
+    const hueValue = map(state, 0, generations, 300, 18);
     fill(hueValue, saturationValue, brightnessValue); // Foreground color with dynamic brightness
   }
   rect(x * w, y * h, w, h);
