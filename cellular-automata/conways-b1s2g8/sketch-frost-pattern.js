@@ -7,8 +7,8 @@ function setup() {
   CANVAS_W = 600; // 603 Canvas width (px)
   CANVAS_H = 600; // 1072 Canvas height (px)
 
-  WIDTH = 100; // 153 CA field width
-  HEIGHT = 100; // 272 CA field height
+  WIDTH = 150; // 153 CA field width
+  HEIGHT = 150; // 272 CA field height
 // Single cell size (px)
   CELL_W = CANVAS_W / WIDTH; // Cell width
   CELL_H = CANVAS_H / HEIGHT; // Cell height
