@@ -19,7 +19,7 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("sketch-container");
   colorMode(HSB, 360, 100, 100); // HSB color mode with alpha support
-  frameRate(120);
+  frameRate(30);
   noStroke();
   cells = generateRandomCells(0);
   cells = generateCenteredSquare(cells, 9);
